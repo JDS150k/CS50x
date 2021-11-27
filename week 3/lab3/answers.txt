@@ -1,0 +1,14 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Because sort1 has the comparatively smallest lower bound when sorting the sorted lists, which is indicative of omega(n).
+This is a lower bound range unique to bubble sort among these three options. Therefore this algorithm uses bubble sort.
+
+sort2 uses: Merge Sort
+
+How do you know?: Because sort2 has the comparatively smallest upper bound when sorting the reversed lists, which is indicative of big-O(n log n).
+This is an upper bound range unique to merge sort among these three options. Therefore this algorithm uses merge sort.
+
+sort3 uses: Selection Sort
+
+How do you know?: Because sort3 has the comparatively largest lower bound when sorting the sorted lists, which is indicative of omega(n^2).
+This is a lower bound range unique to selection sort among these three options. Therefore this algorithm uses selection sort.
