@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', listen);
+            var answerArray = ["monday", "sunday", "wednesday"];
+            function listen()
+            {
+                buttons = document.querySelectorAll('.but');
+                for (i = 0; i < buttons.length; i++)
+                    buttons[i].addEventListener('click', checkbutton);
+                textform = document.querySelectorAll('.textform');
+                for (i = 0; i < textform.length; i++)
+                    textform[i].addEventListener('submit', checkanswer);
+            }
+            function checkbutton()
+            {
+                if (event.srcElement.id == 't')
+                {
+                    event.srcElement.style.backgroundColor = 'green';
+                    event.srcElement.parentNode.parentNode.parentNode.innerHTML += 'Correct!';
+                }
+                else
+                {
+                    event.srcElement.style.backgroundColor = 'red';
+                    event.srcElement.parentNode.parentNode.parentNode.innerHTML += 'Incorrect';
+                }
+                let sibs = event.srcElement.parentNode.parentNode.children;
+                for (i = 0; i < sibs.length; i++)
+                    sibs[i].firstChild.removeEventListener('submit', checkbutton);
+            }
+            function checkanswer()
+            {
+                let formElements = event.srcElement.children;
+                let index = (event.srcElement.previousSibling.previousSibling.innerHTML[1]) - 1; //takes the question number from the current question's heading
+                if (formElements[0].value.toLowerCase() == answerArray[index])
+                {
+                    formElements[0].style.backgroundColor = 'green';
+                    formElements[2].innerHTML = 'Correct!';
+                }
+                else
+                {
+                    formElements[0].style.backgroundColor = 'red';
+                    formElements[2].innerHTML = 'Incorrect';
+                }
+                event.srcElement.removeEventListener('submit', checkanswer);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Q1: What is two plus two?</h3>
+                <table>
+                    <tr>
+                        <td><button class="but">Three</button></td>
+                        <td><button class="but" id="t">Four</button></td>
+                        <td><button class="but">Five</button></td>
+                    </tr>
+                </table>
+                <h3>Q2: What is four plus four?</h3>
+                <table>
+                    <tr>
+                        <td><button class="but" id="t">Eight</button></td>
+                        <td><button class="but">Six</button></td>
+                        <td><button class="but">Twelve</button></td>
+                    </tr>
+                </table>
+                <h3>Q3: What is six plus six?</h3>
+                <table>
+                    <tr>
+                        <td><button class="but">Nine</button></td>
+                        <td><button class="but">Fourteen</button></td>
+                        <td><button class="but" id="t">Twelve</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Q1: What is the first day of the week?</h3>
+                <form onsubmit="return false" class="textform">
+                    <input type="text" autocomplete="off">
+                    <input type="submit">
+                    <p></p>
+                </form>
+                <h3>Q2: What is the last day of the week?</h3>
+                <form onsubmit="return false" class="textform">
+                    <input type="text" autocomplete="off">
+                    <input type="submit">
+                    <p></p>
+                </form>
+                <h3>Q3: What is the third day of the week?</h3>
+                <form onsubmit="return false" class="textform">
+                    <input type="text" autocomplete="off">
+                    <input type="submit">
+                    <p></p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
+
