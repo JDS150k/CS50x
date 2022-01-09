@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Add a Birthday</h2>
+                <!-- TODO: Create a form for users to submit a name, a month, and a day -->
+                <!-- **3)** add an HTML form. The form should let users type in a name, a birthday month, and a birthday day.
+                            Be sure the form submits to / (its “action”) with a method of post -->
+                <form action="/" method="POST">
+                    <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+                    <input autocomplete="off" name="month" placeholder="Month" type="integer">
+                    <input autocomplete="off" name="day" placeholder="Day" type="integer">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="section">
+                <h2>All Birthdays</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- TODO: Loop through the database entries to display them in this table -->
+                        <!-- **2)** add logic to render each birthday as a row in the table. Each row should have two columns:
+                                    one column for the person’s name and another column for the person’s birthday. -->
+                        {% for row in bdays %}
+                            <tr>
+                                <td>{{ row.name }}</td>
+                                <td>{{ row.month }}/{{row.day}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

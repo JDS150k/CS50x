@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+<table class="table tablestriped">
+  <tr>
+    <th class="text-left">Symbol</th>
+    <th class="text-left">Name</th>
+    <th class="text-right">Shares</th>
+    <th class="text-right">Price</th>
+    <th class="text-right">Total</th>
+    <th class="text-right">Sell</th>
+  </tr>
+  {% for row in owned %}
+  <tr>
+    <td class="text-left">{{ row["symbol"] }}</td>
+    <td class="text-left">{{ row["name"] }}</td>
+    <td class="text-right">{{ row["shares"] }}</td>
+    <td class="text-right">{{ row["price"] | usd }}</td>
+    <td class="text-right">{{ row["total"] | usd }}</td>
+    <td  class="text-right">
+      <form action="/sell" method="post">
+        <input type="hidden" name="symbol" value="{{ row["symbol"] }}"/>
+        <select name="shares" size="1">
+          <option selected disabled>Quantity</option>
+          <option value="{{ row["shares"] }}">All</option>
+          {% for n in range(row["shares"]) %}
+            <option>{{ n + 1 }}</option>
+          {% endfor %}
+        </select>
+        <button class="btn btn-primary btn-sm" type="submit">Sell</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+  <tfoot>
+    <tr>
+      <td class="border-0 fw-bold text-right" colspan="4">Cash</td>
+      <td class="border-0 text-right">{{ balance | usd }}</td>
+    </tr>
+    <tr>
+      <td class="border-0 fw-bold text-right" colspan="4">TOTAL</td>
+      <td class="border-0 w-bold text-right">{{ grand_total | usd }}</td>
+    </tr>
+  </tfoot>
+</table>
+{% endblock %}
