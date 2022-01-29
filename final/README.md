@@ -9,3 +9,17 @@ and then go to the ETFX within the zoo to combine their selections into a chimer
 of the chimera they have created, generating by quierying a database of phrases that describe various weightings of various cryptocurrencies.
 
 Currently, only the enclosure of Private Coins is populated with animals.
+
+![image](https://user-images.githubusercontent.com/45384912/151660513-e9d1f2df-ff66-4854-b65c-bab4729fd61e.png)
+
+![image](https://user-images.githubusercontent.com/45384912/151660572-555f5eee-fb9d-4222-98dd-923bb1d59a53.png)
+
+![image](https://user-images.githubusercontent.com/45384912/151660586-5e8c6f0a-f593-4c47-9dd2-4f065a70bdfe.png)
+
+![image](https://user-images.githubusercontent.com/45384912/151660528-13071f56-03d2-4d0c-9489-07d3455c763d.png)
+
+![image](https://user-images.githubusercontent.com/45384912/151660540-b07a6117-23e0-4b8c-8aba-1ca5445ffbf1.png)
+
+![image](https://user-images.githubusercontent.com/45384912/151660553-a968c238-213d-40be-b731-c6bf9ca73c93.png)
+
+![image](https://user-images.githubusercontent.com/45384912/151660559-1f2e7236-8c10-4c72-8a05-b9b4239bff0a.png)
