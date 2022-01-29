@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Map
+{% endblock %}
+
+{% block img %}
+    
+    <div id="map">
+        <img src="/static/map.png" class="img-fluid">    
+        <a href="/" title="Entrance" style="position: absolute; left: 47%; top: 52%">Entrance</a>
+        <a href="private-coins?le=private-coins" title="Private Coins" style="position: absolute; left: 18.3%; top: 44.5%">Private Coins</a>
+        <a href="public-coins?le=public-coins" title="Public Coins" style="position: absolute; left: 51%; top: 82%">Public Coins</a>
+        <a href="governance-tokens?le=governance-tokens" title="Governance Tokens" style="position: absolute; left: 12%; top: 63.5%">Governance Tokens</a>
+        <a href="extinct-coins?le=extinct-coins" title="Extinct Coins" style="position: absolute; left: 35.5%; top: 32%">Extinct Coins</a>
+        <a href="stable-coins?le=stable-coins" title="Stable Coins" style="position: absolute; left: 74.5%; top: 65%">Stable Coins</a>
+        <a href="privacy-coins?le=privacy-coins" title="Privacy Coins" style="position: absolute; left: 65%; top: 33.5%">Privacy Coins</a>
+        <a href="utility-tokens?le=utility-tokens" title="Utility Tokens" style="position: absolute; left: 75%; top: 47%">Utility Tokens</a>
+        <a href="sustainable-coins?le=sustainable-coins" title="Sustainable Coins" style="position: absolute; left: 68%; top: 78.5%">Sustainable Coins</a>
+        <a href="security-tokens?le=security-tokens" title="Security Tokens" style="position: absolute; left: 27%; top: 82%">Security Tokens</a>
+        <a href="etfx-platform?le=etfx-platfrom" title="ETFX Platform" style="position: absolute; left: 53.5%; top: 21%">ETFX</a>
+        
+    </div>
+    
+{% endblock %}
+
+{% block txt %}
+<script>
+    let array = ["Where would you like to go next?",
+    "Explore the enclosures, select your creatures, then head to the ETFX to create your chimera!",
+    "If you're stuck, click 'help'."];
+</script>
+{% endblock %}

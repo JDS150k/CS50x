@@ -1,0 +1,275 @@
+body {
+    color: #FFFFFF;
+    font-family:"Corbel",sans-serif;
+    /* font-family: Museo Sans; */
+    background: #ff00ea;
+    text-align: center;
+}
+
+#frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#enclosure {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 70%;
+    height: 80%;
+    background-color: chartreuse;
+}
+
+#enclosure img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.steak {
+    position: absolute;
+    top: 10%;
+    left: 12%;
+    width: 6%;
+    height: 10%;
+    background-image: url(steak0.png);
+    background-size: 100% 100%;
+}
+
+#steakx {
+    background-image: url(steakx.png);
+}
+  
+#switchleft {
+    position: absolute;
+    top: 45%;
+    left: 6%;
+    transform: translate(-50%);
+    width: 8%;
+    height: 10%;
+    background-image: url(left-arrow.png);
+    background-size: 100% 100%;
+    z-index: 999;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+#switchleft p {
+    position: absolute;
+    font-weight: bold;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    
+}
+
+#switchright {
+    position: absolute;
+    top: 45%;
+    left: 94%;
+    transform: translate(-50%);
+    width: 8%;
+    height: 10%;
+    background-image: url(right-arrow.png);
+    background-size: 100% 100%;
+    z-index: 999;
+}
+
+#switchright p {
+    position: absolute;
+    font-weight: bold;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+
+}
+
+#minimap, #mapbox {
+    position: absolute;
+    bottom: 7.5%;
+    left: 10.3%;
+    width: 7.51%;
+    height: 10.8%;
+    border-radius: 50%;
+}
+
+#minimap {
+    background-image: url(map-bare.png);
+    background-size: 100% 100%;
+}
+
+#mapbox {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#minihelp {
+    background-image: url(minihelp.png);
+    border-radius: 50%;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 7.5%;
+    right: 10.3%;
+    width: 3.75%;
+    height: 5.4%;
+}
+
+.draggable {
+    cursor: pointer;
+  }
+
+.sender {
+    position: absolute;
+    border-radius: 1em;
+    text-align: left;
+	padding: 0.25em 0.75em;
+	align-self: flex-start;
+	background-color: cornflowerblue;
+	color: #fff;
+    
+}
+
+.sender.first { border-bottom-left-radius: 0.1em; }
+.sender.last { border-top-left-radius: 0.1em; }
+
+#chat {
+    visibility: hidden;
+}
+
+.helptext {
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    top: 15%;
+    left: 15%;
+}
+
+@media (max-width: 667px) {
+    .displayer{
+        font-size: 7.2px;
+    }
+    #chat p, #switchleft, #switchright, #map a{
+        font-size: 9px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 999px) {
+    .displayer{
+        font-size: 1.6vw;
+    }
+    #chat p, #switchleft, #switchright, #map a{
+        font-size: 2vw;
+    }
+}
+
+@media (min-width: 1000px) {
+    .displayer{
+    font-size: 16.8px;
+    }
+    #chat p, #switchleft, #switchright, #map a{
+        font-size: 21px;
+    }
+}
+
+#map {
+    position: relative;
+}
+
+#speech {
+    position: absolute;
+    left: 12%;
+    top: 10%;
+    width: 76%;
+}
+
+#map a, .displayer {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2px 5px;
+}
+
+.displayer {
+    position: absolute;
+    background-color: blue;
+    z-index: 999999;
+    top: 35%;
+    left: 35%;
+    width: 30%;
+    height: 30%;
+    overflow: auto;
+}
+
+.creature, #zookeeper, #prev, #next {
+    cursor: pointer;
+}
+
+.blink-txt {
+    animation: blinker 1s linear infinite;
+  }
+  
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.blink-image {
+    -moz-animation: blink normal 3s infinite ease-in-out; /* Firefox */
+    -webkit-animation: blink normal 3s infinite ease-in-out; /* Webkit */
+    -ms-animation: blink normal 3s infinite ease-in-out; /* IE */
+    animation: blink normal 3s infinite ease-in-out; /* Opera and prob css3 final iteration */
+}
+ 
+@-moz-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+ 
+@-webkit-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+/* IE */
+@-ms-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+ 
+ 
